@@ -1,0 +1,67 @@
+---
+import logo from "../assets/svg/CD_White_Secondary.svg";
+import { Image } from "astro:assets";
+---
+
+<footer>
+  <switcher-l align="center" space="calc(var(--space)*2)">
+    <Image src={logo} class="logo" height={150} alt="Chartley Designs Logo" />
+    <cluster-l space="var(--space)">
+      <stack-l>
+        <h2>Navigation</h2>
+        <menu>
+          <li>Home</li>
+          <li>Services</li>
+          <li>About</li>
+          <li>Contact</li>
+        </menu>
+      </stack-l>
+      <stack-l>
+        <h2>Navigation</h2>
+        <menu>
+          <li>Home</li>
+          <li>Services</li>
+          <li>About</li>
+          <li>Contact</li>
+        </menu>
+      </stack-l>
+      <stack-l>
+        <h2>Navigation</h2>
+        <menu>
+          <li>Home</li>
+          <li>Services</li>
+          <li>About</li>
+          <li>Contact</li>
+        </menu>
+      </stack-l>
+    </cluster-l>
+  </switcher-l>
+</footer>
+
+<style>
+  footer {
+    min-height: 200px;
+    padding: calc(var(--space) * 2);
+    color: white;
+    background-color: var(--gray);
+  }
+
+  h2 {
+    font-size: var(--step-1);
+    text-align: left;
+  }
+
+  menu {
+    padding-inline-start: 0px;
+  }
+
+  li {
+    list-style: none;
+    padding-inline-start: 0;
+    text-align: left;
+  }
+
+  footer > cluster-l {
+    min-height: inherit;
+  }
+</style>

@@ -1,0 +1,46 @@
+---
+import logo from "../assets/svg/ChartleyDesigns_Primary_RGB.svg";
+import { Image } from "astro:assets";
+---
+
+<header>
+  <cluster-l justify="space-between" align="flex-start">
+    <Image src={logo} class="logo" height={100} alt="Chartley Designs Logo" />
+
+    <cluster-l
+      role="list"
+      justify="center"
+      align="center"
+      space="calc( var(--space)/2 )"
+    >
+      <li class="menu_entry"><a>Home</a></li>
+      <li class="menu_entry"><a>Services</a></li>
+      <li class="menu_entry"><a>About</a></li>
+      <li>
+        <sl-button variant="primary">
+          <span class="menu_entry">Get a Quote</span>
+        </sl-button>
+      </li>
+    </cluster-l>
+  </cluster-l>
+</header>
+
+<style>
+  header {
+    padding: var(--space);
+  }
+
+  li {
+    padding: 0.25rem;
+    list-style: none;
+  }
+
+  .logo {
+    height: max(10vw, 100px);
+  }
+
+  .menu_entry {
+    font-weight: 900;
+    font-size: var(--step-0);
+  }
+</style>
