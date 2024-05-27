@@ -14,4 +14,8 @@ layout without importing them. They're used like a standard HTML Element.
 
 ### Shoelace Web components
 
-[Shoelace.style - Homepage](https://shoelace.style/)
+[Shoelace.style - Homepage](https://shoelace.style/) \
+Shoelace is a library of web components. Use for things like carousels and
+switches. To modify the styles, you can generally get away with adding design
+token properties to a CSS file. `./src/config/properties.css` is setup for CSS
+custom properties.

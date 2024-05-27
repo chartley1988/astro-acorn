@@ -4,38 +4,38 @@ import { Image } from "astro:assets";
 ---
 
 <footer>
-  <switcher-l align="center" space="calc(var(--space)*2)">
+  <cluster-l justify="center" align="center" space="var(--space-2xl)">
     <Image src={logo} class="logo" height={150} alt="Chartley Designs Logo" />
-    <cluster-l space="var(--space)">
-      <stack-l>
+    <cluster-l space="var(--space-m)">
+      <stack-l class="nav-stack">
         <h2>Navigation</h2>
         <menu>
-          <li>Home</li>
-          <li>Services</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Services</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Contact</a></li>
         </menu>
       </stack-l>
-      <stack-l>
+      <stack-l class="nav-stack">
         <h2>Navigation</h2>
         <menu>
-          <li>Home</li>
-          <li>Services</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Services</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Contact</a></li>
         </menu>
       </stack-l>
-      <stack-l>
+      <stack-l class="nav-stack">
         <h2>Navigation</h2>
         <menu>
-          <li>Home</li>
-          <li>Services</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Services</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Contact</a></li>
         </menu>
       </stack-l>
     </cluster-l>
-  </switcher-l>
+  </cluster-l>
 </footer>
 
 <style>
@@ -61,7 +61,21 @@ import { Image } from "astro:assets";
     text-align: left;
   }
 
+  a {
+    transform: translateX(0px);
+    color: white;
+  }
+
+  a:hover {
+    transform: translateX(0.5ch);
+    color: var(--green);
+  }
+
   footer > cluster-l {
     min-height: inherit;
+  }
+
+  .nav-stack {
+    min-width: 200px;
   }
 </style>

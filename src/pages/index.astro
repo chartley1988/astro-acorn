@@ -1,50 +1,61 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <section>
-    <h1>This is a very important heading</h1>
-    <p>And this is what it's all about</p>
-  </section>
+<Layout title="Acorn - Home">
+  <Hero />
 
-  <section>
-    <h2>Services</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis
-      ante nibh, at hendrerit ex euismod vel. Nulla non tincidunt sapien. Cras
-      varius consectetur laoreet. Ut suscipit mi eu dui tincidunt lobortis.
-      Suspendisse commodo molestie elementum. In commodo at felis et pulvinar.
-      Curabitur imperdiet semper pellentesque. Praesent id dolor vel nunc
-      pharetra ullamcorper nec id felis. Nulla cursus condimentum neque, ut
-      molestie enim sollicitudin non. Integer et suscipit turpis. Cras iaculis
-      massa in lorem accumsan congue. In at ultricies tortor.
-    </p>
-  </section>
-  <section>
-    <h2>Portfolio</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis
-      ante nibh, at hendrerit ex euismod vel. Nulla non tincidunt sapien. Cras
-      varius consectetur laoreet. Ut suscipit mi eu dui tincidunt lobortis.
-      Suspendisse commodo molestie elementum. In commodo at felis et pulvinar.
-      Curabitur imperdiet semper pellentesque. Praesent id dolor vel nunc
-      pharetra ullamcorper nec id felis. Nulla cursus condimentum neque, ut
-      molestie enim sollicitudin non. Integer et suscipit turpis. Cras iaculis
-      massa in lorem accumsan congue. In at ultricies tortor.
-    </p>
-  </section>
-  <section>
-    <h2>Values</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis
-      ante nibh, at hendrerit ex euismod vel. Nulla non tincidunt sapien. Cras
-      varius consectetur laoreet. Ut suscipit mi eu dui tincidunt lobortis.
-      Suspendisse commodo molestie elementum. In commodo at felis et pulvinar.
-      Curabitur imperdiet semper pellentesque. Praesent id dolor vel nunc
-      pharetra ullamcorper nec id felis. Nulla cursus condimentum neque, ut
-      molestie enim sollicitudin non. Integer et suscipit turpis. Cras iaculis
-      massa in lorem accumsan congue. In at ultricies tortor.
-    </p>
-  </section>
+  <center-l>
+    <stack-l space="var(--space-l)">
+      <section>
+        <h2>Services</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          iaculis ante nibh, at hendrerit ex euismod vel. Nulla non tincidunt
+          sapien. Cras varius consectetur laoreet. Ut suscipit mi eu dui
+          tincidunt lobortis. Suspendisse commodo molestie elementum. In commodo
+          at felis et pulvinar. Curabitur imperdiet semper pellentesque.
+          Praesent id dolor vel nunc pharetra ullamcorper nec id felis. Nulla
+          cursus condimentum neque, ut molestie enim sollicitudin non. Integer
+          et suscipit turpis. Cras iaculis massa in lorem accumsan congue. In at
+          ultricies tortor.
+        </p>
+      </section>
+      <section>
+        <h2>Portfolio</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          iaculis ante nibh, at hendrerit ex euismod vel. Nulla non tincidunt
+          sapien. Cras varius consectetur laoreet. Ut suscipit mi eu dui
+          tincidunt lobortis. Suspendisse commodo molestie elementum. In commodo
+          at felis et pulvinar. Curabitur imperdiet semper pellentesque.
+          Praesent id dolor vel nunc pharetra ullamcorper nec id felis. Nulla
+          cursus condimentum neque, ut molestie enim sollicitudin non. Integer
+          et suscipit turpis. Cras iaculis massa in lorem accumsan congue. In at
+          ultricies tortor.
+        </p>
+      </section>
+      <section>
+        <h2>Values</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          iaculis ante nibh, at hendrerit ex euismod vel. Nulla non tincidunt
+          sapien. Cras varius consectetur laoreet. Ut suscipit mi eu dui
+          tincidunt lobortis. Suspendisse commodo molestie elementum. In commodo
+          at felis et pulvinar. Curabitur imperdiet semper pellentesque.
+          Praesent id dolor vel nunc pharetra ullamcorper nec id felis. Nulla
+          cursus condimentum neque, ut molestie enim sollicitudin non. Integer
+          et suscipit turpis. Cras iaculis massa in lorem accumsan congue. In at
+          ultricies tortor.
+        </p>
+      </section>
+    </stack-l>
+  </center-l>
 </Layout>
+
+<style>
+  center-l {
+    margin-bottom: var(--space-l);
+  }
+</style>

@@ -1,0 +1,25 @@
+---
+import Image from "astro/components/Image.astro";
+import logo from "../assets/svg/ChartleyDesigns_Icon_RGB.svg";
+---
+
+<section>
+  <cluster-l justify="center" align="center" space="var(--space-m)">
+    <stack-l space="var(--space-xs)">
+      <h1>Chartley Designs</h1>
+      <p>Stylish websites for your business venture, events and more</p>
+      <sl-button variant="primary">Get in touch</sl-button>
+    </stack-l>
+    <Image src={logo} width={350} alt="Chartley Designs Hero Logo" />
+  </cluster-l>
+</section>
+
+<style>
+  section {
+    background-color: var(--gray);
+  }
+
+  section * {
+    color: white;
+  }
+</style>

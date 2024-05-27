@@ -27,6 +27,17 @@ h6 {
   font-weight: 600;
 }
 
-.btn {
-  font-weight: 900;
+p {
+  max-width: 80ch;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  transition-duration: 0.3s;
+  display: inline-block;
+}
+
+a:hover {
+  font-weight: 700;
 }

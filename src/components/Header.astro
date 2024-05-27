@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 
 <header>
   <cluster-l justify="space-between" align="flex-start">
-    <Image src={logo} class="logo" height={100} alt="Chartley Designs Logo" />
+    <Image src={logo} class="logo" height={80} alt="Chartley Designs Logo" />
 
     <cluster-l
       role="list"
@@ -27,7 +27,7 @@ import { Image } from "astro:assets";
 
 <style>
   header {
-    padding: var(--space);
+    padding: var(--space-s);
   }
 
   li {
@@ -35,8 +35,14 @@ import { Image } from "astro:assets";
     list-style: none;
   }
 
-  .logo {
-    height: max(10vw, 100px);
+  a {
+    color: black;
+    transform: translateY(0);
+  }
+
+  a:hover {
+    color: var(--green);
+    transform: translateY(-0.3ch);
   }
 
   .menu_entry {
