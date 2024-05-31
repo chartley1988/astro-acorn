@@ -34,5 +34,5 @@ may be worth including the whole stylesheet.
 
 ### Generic Components needed for most projects
 
-- [Header]('./src/components/Header.astro')
-- [Footer]('./src/components/Footer.astro')
+- [Header](src/components/Header.astro)
+- [Footer](src/components/Footer.astro)
