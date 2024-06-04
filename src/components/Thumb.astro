@@ -1,0 +1,115 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import type { ImageMetadata } from "astro";
+
+type Props = {
+  image: ImageMetadata;
+  width?: number;
+  height?: number;
+};
+
+const { image, width, height } = Astro.props;
+---
+
+<acorn-thumb data-image={image}>
+  <!-- Thumbnails -->
+  <button class="thumb">
+    <Image
+      src={image}
+      height={height}
+      width={width}
+      alt="Thumbnail of photo"
+      loading="lazy"
+    />
+  </button>
+
+  <!-- Pop-up modal element of picture -->
+  <dialog>
+    <Image src={image} width={1000} alt="Thumbnail of photo" loading="lazy" />
+    <Icon name="close" size={36} />
+  </dialog>
+</acorn-thumb>
+
+<style>
+  button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: var(--shadow-sm);
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  dialog {
+    padding: 0;
+    border: none;
+    margin: auto;
+  }
+
+  dialog img {
+    object-fit: cover;
+    width: clamp(300px, 0.8, 1000px);
+    height: auto;
+    box-shadow: var(--shadow-sm);
+  }
+
+  dialog::backdrop {
+    background-color: black;
+    opacity: 0.75;
+  }
+
+  /* Close Icon */
+  [data-icon] {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: var(--green);
+    transition-duration: 0.3s;
+  }
+
+  [data-icon]:hover {
+    color: white;
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+  }
+</style>
+
+<script>
+  class AcornThumb extends HTMLElement {
+    constructor() {
+      super();
+
+      // Read the message from the data attribute.
+      const image = this.dataset.image;
+      const button = this.querySelector("button");
+      const dialog = this.querySelector("dialog");
+      const closeButton = dialog.querySelector("svg");
+
+      button.addEventListener("click", (e) => {
+        e.stopPropagation();
+        dialog.showModal();
+      });
+
+      dialog.addEventListener("click", (e) => {
+        const dialogDimensions = dialog.getBoundingClientRect();
+        if (
+          e.clientX < dialogDimensions.left ||
+          e.clientX > dialogDimensions.right ||
+          e.clientY < dialogDimensions.top ||
+          e.clientY > dialogDimensions.bottom
+        ) {
+          dialog.close();
+        }
+      });
+
+      closeButton.addEventListener("click", (e) => {
+        dialog.close();
+      });
+    }
+  }
+
+  customElements.define("acorn-thumb", AcornThumb);
+</script>
