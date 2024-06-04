@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "@fontsource/lato": "^5.0.21",
-    "astro": "^4.8.5"
+    "astro": "^4.8.5",
+    "astro-icon": "^1.1.0"
   },
   "devDependencies": {
     "prettier": "^3.2.5",

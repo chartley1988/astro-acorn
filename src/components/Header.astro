@@ -1,11 +1,13 @@
 ---
-import logo from "../assets/svg/ChartleyDesigns_Primary_RGB.svg";
+import logo from "../assets/svg/AcornLogo.svg";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 ---
 
 <header>
   <cluster-l justify="space-between" align="flex-start">
-    <Image src={logo} class="logo" height={80} alt="Chartley Designs Logo" />
+    <!-- <Image src={logo} class="logo" height={80} alt="Chartley Designs Logo" /> -->
+    <Icon name="acorn2" size={64} />
 
     <cluster-l
       role="list"
@@ -48,5 +50,9 @@ import { Image } from "astro:assets";
   .menu_entry {
     font-weight: 900;
     font-size: var(--step-0);
+  }
+
+  [data-icon] {
+    color: var(--green);
   }
 </style>
