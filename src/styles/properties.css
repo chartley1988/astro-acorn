@@ -2,17 +2,19 @@
   --space: 1rem;
 
   /* Colors */
-  --gray: hsl(200, 20%, 23%); /* From logo */
-  --green: hsl(100, 26%, 45%); /* From logo */
-  /* From logo */
+  --primary: #d4a373;
+
+  --background: #fefae0;
+  --background-dark: #6e543b;
+
+  --font-color-dark: #30251a;
 
   /* Font Styles */
   --font-body: "Lato", sans-serif;
-  --font-header: "Lato", sans-serif;
+  --font-header: "Merienda Variable", cursive;
 
   /* Font Sizes */
   /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1920,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-
   --step--2: clamp(0.6944rem, 0.6733rem + 0.1056vi, 0.8rem);
   --step--1: clamp(0.8333rem, 0.8rem + 0.1667vi, 1rem);
   --step-0: clamp(1rem, 0.95rem + 0.25vi, 1.25rem);

@@ -1,11 +1,12 @@
 ---
 import logo from "../assets/svg/CD_White_Secondary.svg";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 ---
 
 <footer>
   <cluster-l justify="center" align="center" space="var(--space-2xl)">
-    <Image src={logo} class="logo" height={150} alt="Chartley Designs Logo" />
+    <Icon name="acorn2" size={96} />
     <cluster-l space="var(--space-m)">
       <stack-l class="nav-stack">
         <h2>Navigation</h2>
@@ -43,7 +44,7 @@ import { Image } from "astro:assets";
     min-height: 200px;
     padding: calc(var(--space) * 2);
     color: white;
-    background-color: var(--gray);
+    background-color: var(--background-dark);
   }
 
   h2 {
